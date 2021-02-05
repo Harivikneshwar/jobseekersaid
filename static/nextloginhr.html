@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jobseeker Aid.Com</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="nextloginhr.js"></script>
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="faviicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="faviicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="faviicon/favicon-16x16.png">
+  <link rel="manifest" href="faviicon/site.webmanifest">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {margin: 0;}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2ecc71;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul.topnav li b {
+
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #4CAF50;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  float: right;
+}
+#home{
+  display:none;
+}
+#viewjob{
+  display:none;
+}
+#viewapplicants{
+  display:none;
+}
+.viewbtn {
+  width:200px;
+  height:50px;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+
+.viewbtn:hover {background-color: #3e8e41}
+
+.viewbtn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.viewbtn1 {
+  width:200px;
+  height:50px;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+#currentdate{
+  display:none;
+}
+
+.viewbtn1:hover {background-color: #3e8e41}
+
+.viewbtn1:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+@media screen and (max-width: 600px) {
+  ul.topnav li.right,
+  ul.topnav li {float: none;}
+}
+
+.contact-form{
+    background: #2ecc71;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 70%;
+    box-shadow: 10px 10px 5px grey;
+    border-radius: 100px;
+}
+.contact-form .form-control{
+    border-radius:1rem;
+}
+.contact-image{
+    text-align: center;
+}
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+    transform: rotate(29deg);
+}
+.contact-form form{
+    padding: 14%;
+}
+.contact-form form .row{
+    margin-bottom: -7%;
+}
+.contact-form h3{
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
+    color: #fff;
+}
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #fff;
+    font-weight: 600;
+    color: #2ecc71;
+    cursor: pointer;
+}
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #2ecc71;
+    border: none;
+    cursor: pointer;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#loading{
+  display:none;
+}
+h{
+  style="color:white;
+}
+#user{
+  display:none;
+}
+#loadingg{
+  display:none;
+  margin-top:10%;
+  margin-left:46%;
+}
+#loadinggg{
+  display:none;
+  margin-top:10%;
+  margin-left:46%;
+}
+#jobidview{
+  box-shadow: 0 2px #999;
+  width:200px;
+  height:50px;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 15px;
+  border-radius: 4px;
+  border: 2px solid #2ecc71;
+  text-align: center;
+  text-decoration: none;
+
+}
+#homepage{
+  style:none;
+}
+</style>
+</head>
+<body style="background-image: url('image11.jpg');background-attachment: fixed;background-size: 100% 100%;">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <ul class="topnav">
+    <li><a onclick="homepage()" >Home</a></li>
+    <li><a onclick="home()">Post Your Job</a></li>
+    <li><a onclick="viewjob()">View Posted Jobs</a></li>
+    <li><a onclick="viewapplicants()">Applications Received</a></li>
+    <li><a onclick="deleteItems()" href="/">Logout</a></li>
+    <li class="right" id="result"><a></a></li>
+  </ul>
+  <div id="homepage">
+
+    <!-- Promo Section - "We know design" -->
+    <div class="w3-container w3-light-grey" style="padding:128px 16px" id="about">
+      <div class="w3-row-padding">
+        <div class="w3-col m6">
+          <br><br>
+          <h3>Why Jobseekers Aid.Com ?</h3>
+          <p>It is a Platform Connecting Jobseeker with an Employer for Free, There is no charge for Recruitting Employees from our Site and Sign up as an Jobseeker in our portal.</p>
+          <br><br>
+        </div>
+        <div class="w3-col m6">
+          <img class="w3-image w3-round-large w3-hide-small" src="image13.jpg" alt="Buildings" style="border-radius:500px;margin-left:10%;" width="500" height="394">
+          <img class="w3-image w3-round-large w3-hide-large w3-hide-medium" src="image13.jpg" alt="Buildings" style="border-radius:500px;" width="500" height="394">
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Promo Section "Statistics" -->
+
+
+
+    <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+
+      <div class="w3-quarter">
+        <span class="w3-xxlarge">1000+</span>
+        <br>Canditates<br><br>
+      </div>
+      <div class="w3-quarter">
+        <span class="w3-xxlarge">100+</span>
+        <br>Happy Clients<br><br>
+      </div>
+      <div class="w3-quarter">
+        <span class="w3-xxlarge">150+</span>
+        <br>Companies<br><br>
+      </div>
+      <div class="w3-quarter">
+        <span class="w3-xxlarge">100+</span>
+        <br>Feedbacks<br><br>
+      </div>
+    </div>
+
+    <div class="w3-green">
+    <h2 class="w3-center p3"><i>Cool Companies to work with</i></h2>
+
+    <div class="w3-content w3-section" style="max-width:500px">
+      <img class="mySlides" src="accenture.jpg" style="width:100%;height:400px;">
+      <img class="mySlides" src="Airbus.jpg" style="width:100%;height:400px;">
+      <img class="mySlides" src="Infosys.jpg" style="width:100%;height:400px;">
+      <img class="mySlides" src="TATA.jpg" style="width:100%;height:400px;">
+    </div>
+    <br>
+
+    <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+      <h3 class="w3-center">CONTACT</h3>
+      <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+      <div style="margin-top:48px">
+        <form id="homeform2">
+          <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+          <p>
+            <button class="w3-button w3-black" id="homeform2" type="submit">
+              <i class="fa fa-paper-plane"></i> SEND MESSAGE
+            </button>
+          </p>
+        </form>
+        <!-- Image of location/map -->
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-green w3-padding-32">
+      <a class="w3-xlarge"><b><i>Contact Us</b></i></a>
+      <div class="w3-xlarge w3-section">
+        <i class="fa fa-youtube w3-hover-opacity" onclick="youtube()"></i>&ensp;
+        <i class="fa fa-envelope w3-hover-opacity" onclick="mail()"></i>&ensp;
+        <i class="fa fa-linkedin w3-hover-opacity" onclick="linkedin()"></i>
+      </div>
+
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+    <script>
+    function youtube(){  window.open("https://www.youtube.com/channel/UCEwcoUBv95eVi3R7YjS7PFA","_blank","","");}
+    function mail(){  alert("Please go to contact form for any queries")}
+    function linkedin(){  window.open("https://www.linkedin.com/company/jobseeker-aid-com/?viewAsMember=true","_blank","","");}
+
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+
+
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+      } else {
+        mySidebar.style.display = 'block';
+      }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+        mySidebar.style.display = "none";
+    }
+    </script>
+
+
+  </div>
+  <div id="home">
+
+
+      <div class="container contact-form">
+                  <form id="myForm2">
+                     <h3>Post a Job</h3>
+                     <div class="row">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                <input type="text" id="user" name="username" class="form-control" placeholder="UserID *" value="" />
+                              </div>
+                              <div class="form-group">
+                                  <input type="text" name="jobtitle" class="form-control" placeholder="Job Title *" value="" required/>
+                              </div>
+                              <div class="form-group">
+                                  <input type="text" name="companyname" class="form-control" placeholder="Company Name *" value="" required/>
+                              </div>
+                              <div class="form-group">
+                                  <input type="text" name="education" class="form-control" placeholder="Educational Qualification *" value="" required/>
+                              </div>
+                              <div class="form-group">
+                                  <input type="text" name="vacancies" class="form-control" placeholder="Vacancies *" value="" />
+                              </div>
+                              <div class="form-group">
+                                <h style="color:white;"><u>   LastDate :</u></h><br><br>
+                                  <input type="date" name="lastdate" class="form-control" placeholder="Lastdate *" value="" required/>
+                              </div>
+                              <br><br>
+                          </div>
+
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <textarea name="Job description" class="form-control" placeholder="Job Description in detail" style="width: 100%; height: 200px;"></textarea>
+                              </div>
+                              <div class="form-group">
+                                <input type="radio" name="experience" value="Experienced"><h style="color:white;"> Experienced   </h>
+                                <input type="radio" name="experience" value="Fresher"><h style="color:white;"> Fresher</h>
+                              </div>
+                              <div class="form-group">
+                                  <input type="text" name="experiencemonths" class="form-control" placeholder="Experience in months" value="" />
+                              </div>
+                              <div class="form-group">
+                                  <input type="text" name="salary" class="form-control" placeholder="Salary " value="" />
+                              </div>
+                              <div class="form-group">
+                                <input type="radio" name="fulltime" value="parttime"><h style="color:white;"> Part-time   </h>
+                                <input type="radio" name="fulltime" value="fulltime"><h style="color:white;"> Full-time</h>
+                              </div>
+                              <div class="form-group">
+                                  <input id="currentdate" type="text" name="currentdate" class="form-control" placeholder="date" value="" />
+                              </div>
+                              <div class="form-group">
+                                  <input type="submit" id="submit" name="btnSubmit" class="btnContact" value="submit" />
+                              </div>
+                              <br>
+                              <div id="loading" class="spinner-border text-primary"></div>
+                          </div>
+                      </div>
+                  </form>
+      </div>
+</div>
+
+
+<div id="viewjob">
+  <div class="w3-center">
+  <br>
+  <br>
+  <h2 class="w3-xlarge w3-center"><i>Click on the icon to view posted jobs</i></h2><br>
+  <button class="viewbtn" type="button" id="loadData">View Posted Jobs</button>
+</div>
+   <div id="loadingg" class="spinner-border text-primary">&emsp;&emsp;&emsp;</div>
+       <div id="output">
+
+       </div>
+
+
+ </div>
+
+
+<div id="viewapplicants">
+  <div class="w3-center">
+  <br>
+  <br>
+   <h2 class="w3-xlarge w3-center"><i>Enter Your Job Id to check Response</i></h2><br>
+   <input type="text" id="jobidview" placeholder="Enter Job ID*" value="" />&emsp;
+   <hr>
+
+   <button class="viewbtn1" type="button" id="loadData1">View Applicants</button>
+ </div>
+   <div id="loadinggg" class="spinner-border text-primary">&emsp;&emsp;&emsp;</div>
+   <div id="output1">
+
+   </div>
+
+
+</div>
+
+
+<script>
+var _0xf556=["\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x72\x65\x73\x75\x6C\x74","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x74\x65\x78\x74\x76\x61\x6C\x75\x65","\x67\x65\x74\x49\x74\x65\x6D","\x76\x61\x6C\x75\x65","\x75\x73\x65\x72","\x75\x73\x65\x72\x76\x61\x6C\x75\x65"];document[_0xf556[2]](_0xf556[1])[_0xf556[0]]= localStorage[_0xf556[4]](_0xf556[3]);document[_0xf556[2]](_0xf556[6])[_0xf556[5]]= localStorage[_0xf556[4]](_0xf556[7])
+
+n =  new Date();
+y = n.getFullYear();
+m = n.getMonth() + 1;
+d = n.getDate();
+document.getElementById("currentdate").value =  m + "/" + d + "/" + y;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<html>
+<head>
+  <title>Jobseeker Aid.Com</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="hi.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="faviicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="faviicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="faviicon/favicon-16x16.png">
+  <link rel="manifest" href="faviicon/site.webmanifest">
+
+  <style>
+  .login-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.login-form-1{
+    padding: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3{
+    text-align: center;
+    color: #2ecc71;
+}
+.login-form-2{
+    padding: 5%;
+    background: #2ecc71;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h3{
+    text-align: center;
+    color: #fff;
+}
+.login-container form{
+    padding: 10%;
+}
+.btnSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+.login-form-1 .btnSubmit{
+    font-weight: 600;
+    color: #fff;
+    background-color: #2ecc71;
+}
+.login-form-2 .btnSubmit{
+    font-weight: 600;
+    color: #2ecc71;
+    background-color: #fff;
+}
+.login-form-2 .ForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.login-form-1 .ForgetPwd{
+    color: #2ecc71;
+    font-weight: 600;
+    text-decoration: none;
+}
+#loadingloginform{
+  display:none;
+}
+#loadingloginform1{
+  display:none;
+}
+.buttonload {
+  background-color: white; /* Green background */
+  border: none; /* Remove borders */
+  color: #2ecc71; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px /* Set a font size */
+}
+.buttonloadd {
+  background-color: #2ecc71; /* Green background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px /* Set a font size */
+}
+</style>
+
+</head>
+<body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="hi.js"></script>
+  <script type="text/javascript">
+  function image() {
+      window.open("/","_parent","","");
+  }
+  </script>
+  <div style="height:80px;background-color:#2ecc71;">
+    <img src="logo.JPG" onclick="image()" style="margin-left:8px;margin-top:8px;height:60px;width:150px;" />
+
+  </div>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<div class="container login-container">
+            <div class="row">
+                <div class="col-md-6 login-form-1">
+                    <h3>Jobseeker login</h3>
+                    <form id="loginform">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Email *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Your Password *" value="" />
+                        </div>
+                        <div id="output">
+
+                        </div>
+                        <div class="form-group">
+                            <button type="button" id="loadData" class="btnSubmit" value="Login">login</button>
+                        </div>
+                        <div id="loadingloginform">
+                          <button class="buttonload">
+                              <i class="fa fa-refresh fa-spin"></i>  Loading
+                          </button>
+                        </div>
+                        <div class="form-group">
+                            <a href="#" class="ForgetPwd" onclick="mypassword()" >Forget Password?</a>
+                        </div>
+                        <div id="pass">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md-6 login-form-2">
+                    <h3>Employer login</h3>
+                    <form id="loginhrform">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Email *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Your Password *" value="" />
+                        </div>
+                        <div id="output1">
+
+                        </div>
+                        <div class="form-group">
+                            <button type="button" id="loadHRData" class="btnSubmit" value="Login">login</button>
+                        </div>
+                        <div id="loadingloginform1">
+                          <button class="buttonloadd">
+                              <i class="fa fa-refresh fa-spin"></i>  Loading
+                          </button>
+                        </div>
+                        <div class="form-group">
+
+                            <a href="#" class="ForgetPwd" onclick="mypassword1()">Forget Password?</a>
+                        </div>
+                        <div id="pass1">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+<div style="text-align: center;">
+  <a href="/"><b>Click here to Create a Account</b></a>
+  <br><br><br><br>
+</div>
+</body>
+</html>

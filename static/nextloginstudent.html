@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jobseeker Aid.Com</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="nextloginstudent.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="apple-touch-icon" sizes="180x180" href="faviicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="faviicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="faviicon/favicon-16x16.png">
+<link rel="manifest" href="faviicon/site.webmanifest">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {margin: 0;}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2ecc71;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul.topnav li b {
+
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #4CAF50;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  float: right;
+}
+#home{
+  display:none;
+}
+#viewjob{
+  display:none;
+}
+.viewbtn {
+  width:200px;
+  height:50px;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.viewbtn:hover {background-color: #3e8e41}
+
+.viewbtn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right,
+  ul.topnav li {float: none;}
+}
+
+.contact-form{
+    background: #2ecc71;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 70%;
+    box-shadow: 10px 10px 5px grey;
+    border-radius: 100px;
+}
+.contact-form .form-control{
+    border-radius:1rem;
+}
+.contact-image{
+    text-align: center;
+}
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+    transform: rotate(29deg);
+}
+.contact-form form{
+    padding: 14%;
+}
+.contact-form form .row{
+    margin-bottom: -7%;
+}
+.contact-form h3{
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
+    color: #fff;
+}
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #fff;
+    font-weight: 600;
+    color: #2ecc71;
+    cursor: pointer;
+}
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #2ecc71;
+    border: none;
+    cursor: pointer;
+}
+#loading{
+  display:none;
+}
+#loadinggg{
+  display:none;
+}
+h{
+  style="color:white;
+}
+#user{
+  display:none;
+}
+#resume{
+  display:none;
+}
+#qualification{
+  display:none;
+}
+#experience{
+  display:none;
+}
+#loadingg{
+  display:none;
+  margin-top:10%;
+  margin-left:46%;
+}
+#loadingggg{
+  display:none;
+  margin-top:10%;
+  margin-left:46%;
+}
+#loadinggggg{
+  display:none;
+  margin-top:10%;
+  margin-left:46%;
+}
+#loadingggggg{
+  display:none;
+  margin-top:10%;
+  margin-left:46%;
+}
+#profilevalue{
+  display:none;
+}
+#updateprofile{
+  display:none;
+}
+#updatedetails{
+  display:none;
+}
+#userid{
+  display:none;
+}
+#userid1{
+  display:none;
+}
+#performance{
+  display:none;
+}
+
+.formStyle {
+  background-color: #2ecc71;
+  padding: 20px;
+  width: 400px;
+  margin-bottom: 20px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ecf0f1;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  font-size: 1em;
+  font-weight: 100;
+  color: #ffffff;
+}
+.updateform{
+
+  margin: auto;
+  background-color: #2ecc71;
+  font-family: source-sans-pro, sans-serif;
+}
+.formButton {
+  float: right;
+background-color:#ffffff;
+display:inline-block;
+color:#2ecc71;
+font-size:28px;
+font-weight: 500;
+padding:6px 24px;
+  margin-top: 15px;
+  margin-right: 60px;
+text-decoration:none;
+}
+
+.formButton:hover {
+background-color: #27ae60;
+  color:#ffffff;
+}
+
+.formButton:active {
+position:relative;
+top:3px;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  #homepage{
+    style:block;
+  }
+  /* Modal Content */
+  .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+  }
+
+  /* The Close Button */
+  .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+  }
+  .bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("image12.jpg");
+    min-height: 100%;
+  }
+
+  .w3-bar .w3-button {
+    padding: 16px;
+  }
+  .p3 {
+    font-family: Georgia, serif;
+  }
+  .mySlides {
+    display:none;
+  }
+</style>
+</head>
+<body style="background-image: url('image11.jpg');background-attachment: fixed;background-size: 100% 100%;">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <div>
+
+<div>
+<ul class="topnav">
+  <li><a onclick="homepage()">Home</a></li>
+  <li><a onclick="viewjob()">Apply Jobs</a></li>
+  <li><a onclick="home()">View Applied Jobs</a></li>
+  <li><a id="performance1" onclick="performance()">Performance section</a></li>
+  <li><a id="profiles" onclick="profile()">My Profile</a></li>
+  <li><a onclick="deleteItems()" href="/">Logout</a></li>
+  <li class="right" id="result"><a></a></li>
+</ul>
+</div>
+
+
+<div id="homepage">
+
+  <!-- Promo Section - "We know design" -->
+  <div class="w3-container w3-light-grey" style="padding:128px 16px" id="about">
+    <div class="w3-row-padding">
+      <div class="w3-col m6">
+        <br><br>
+        <h3>Why Jobseekers Aid.Com ?</h3>
+        <p>It is a Platform Connecting Jobseeker with an Employer for Free, There is no charge for Recruitting Employees from our Site and Sign up as an Jobseeker in our portal.</p>
+        <br><br>
+      </div>
+      <div class="w3-col m6">
+        <img class="w3-image w3-round-large w3-hide-small" src="image13.jpg" alt="Buildings" style="border-radius:500px;margin-left:10%;" width="500" height="394">
+        <img class="w3-image w3-round-large w3-hide-large w3-hide-medium" src="image13.jpg" alt="Buildings" style="border-radius:500px;" width="500" height="394">
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Promo Section "Statistics" -->
+
+
+
+  <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+
+    <div class="w3-quarter">
+      <span class="w3-xxlarge">1000+</span>
+      <br>Canditates<br><br>
+    </div>
+    <div class="w3-quarter">
+      <span class="w3-xxlarge">100+</span>
+      <br>Happy Clients<br><br>
+    </div>
+    <div class="w3-quarter">
+      <span class="w3-xxlarge">150+</span>
+      <br>Companies<br><br>
+    </div>
+    <div class="w3-quarter">
+      <span class="w3-xxlarge">100+</span>
+      <br>Feedbacks<br><br>
+    </div>
+  </div>
+
+  <div class="w3-green">
+  <h2 class="w3-center p3"><i>Cool Companies to work with</i></h2>
+
+  <div class="w3-content w3-section" style="max-width:500px">
+    <img class="mySlides" src="accenture.jpg" style="width:100%;height:400px;">
+    <img class="mySlides" src="Airbus.jpg" style="width:100%;height:400px;">
+    <img class="mySlides" src="Infosys.jpg" style="width:100%;height:400px;">
+    <img class="mySlides" src="TATA.jpg" style="width:100%;height:400px;">
+  </div>
+  <br>
+
+  <script>
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+  </script>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+    <h3 class="w3-center">CONTACT</h3>
+    <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+    <div style="margin-top:48px">
+      <form id="homeform1">
+        <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+        <p>
+          <button class="w3-button w3-black" id="homeform" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </p>
+      </form>
+      <!-- Image of location/map -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-center w3-green w3-padding-32">
+    <a class="w3-xlarge"><b><i>Contact Us</b></i></a>
+    <div class="w3-xlarge w3-section">
+      <i class="fa fa-youtube w3-hover-opacity" onclick="youtube()"></i>&ensp;
+      <i class="fa fa-envelope w3-hover-opacity" onclick="mail()"></i>&ensp;
+      <i class="fa fa-linkedin w3-hover-opacity" onclick="linkedin()"></i>
+    </div>
+
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+  <script>
+  function youtube(){  window.open("https://www.youtube.com/channel/UCEwcoUBv95eVi3R7YjS7PFA","_blank","","");}
+  function mail(){  alert("Please go to contact form for any queries")}
+  function linkedin(){  window.open("https://www.linkedin.com/company/jobseeker-aid-com/?viewAsMember=true","_blank","","");}
+
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
+
+
+  // Toggle between showing and hiding the sidebar when clicking the menu icon
+  var mySidebar = document.getElementById("mySidebar");
+
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
+  }
+
+  // Close the sidebar with the close button
+  function w3_close() {
+      mySidebar.style.display = "none";
+  }
+  </script>
+
+
+</div>
+<div id="viewjob">
+  <div class="w3-center">
+  <br>
+  <br>
+  <h2 class="w3-xlarge w3-center"><i>Click on the icon to view available jobs</i></h2><br>
+   <button class="viewbtn" type="button" id="loadData">View Available Jobs</button>
+   <hr>
+   <h2 class="w3-xlarge w3-center"><i>Click on the icon to Apply jobs</i></h2><br>
+   <button class="viewbtn" type="button" id="myBtn">Apply</button>
+   <hr>
+</div>
+   <!-- The Modal -->
+   <div id="myModal" class="modal">
+
+     <!-- Modal content -->
+     <div class="modal-content">
+       <span class="close">&times;</span>
+       <p>Please enter job id to apply</p>
+       <form id="myForm">
+         <div class="form-group">
+           <input type="text" id="user" name="username" class="form-control" placeholder="UserID *" value="" />
+         </div>
+         <div class="form-group">
+           <input type="text" id="jobid" name="Job ID" class="form-control" placeholder="Enter Job ID *" value="" required/>
+         </div>
+         <div class="form-group">
+           <input type="text" id="employeruserid" name="Employer User ID" class="form-control" placeholder="Enter Employer User Name *" value="" required/>
+         </div>
+         <div class="form-group">
+           <input type="text" id="qualification" name="qualification" class="form-control" placeholder="Enter your qualification with branch *" value="" />
+         </div>
+         <div class="form-group">
+           <input type="text" id="experience" name="experience" class="form-control" placeholder="Fresher/experienced" value="" />
+         </div>
+         <div class="form-group">
+           <input type="text" id="resume" name="Resume Link" class="form-control" placeholder="Paste your resume link *" value="" />
+         </div>
+         <div class="form-group">
+             <input type="submit" id="submit" name="btnSubmit" class="btnContact" value="submit" />
+         </div>
+         <div id="loadinggg" class="spinner-border text-primary">&emsp;&emsp;&emsp;</div>
+       </form>
+     </div>
+
+   </div>
+
+   <div id="loadingg" class="spinner-border text-primary">&emsp;&emsp;&emsp;</div>
+   <div id="output">
+
+   </div>
+  </div>
+
+<div id="home">
+  <div class="w3-center">
+  <br>
+  <br>
+  <h2 class="w3-xlarge w3-center"><i>Click on the icon to view applied jobs</i></h2><br>
+  <button class="viewbtn" type="button" id="loadData1">View Applied Jobs</button>
+  <div id="loadingggg" class="spinner-border text-primary">&emsp;&emsp;&emsp;</div>
+</div>
+  <div id="output1">
+
+  </div>
+
+</div>
+
+<div id="performance">
+  <div class="w3-center">
+  <br>
+  <br>
+  <div id="loadingggggg" class="spinner-border text-primary">&emsp;&emsp;&emsp;</div>
+  <div id="output3">
+  </div>
+
+  <h2 class="w3-xlarge w3-center"><i>Please attend this test to update your performance score </i></h2><br>
+  <p>First time score only will be considered</p>
+  <div class="w3-hide-small">
+   <button class="viewbtn" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfU2Ke1FFhOzzMKJaqxqeGa8YppEAHXuCMMBILWf2w8TMZHww/viewform')" type="button" id="loadData11">Numerical Aptitude</button>
+   <button class="viewbtn" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfU2Ke1FFhOzzMKJaqxqeGa8YppEAHXuCMMBILWf2w8TMZHww/viewform')" type="button" id="loadData12">Performance </button>
+ </div>
+ <div class="w3-hide-large w3-hide-medium">
+  <button class="viewbtn" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfU2Ke1FFhOzzMKJaqxqeGa8YppEAHXuCMMBILWf2w8TMZHww/viewform')" type="button" id="loadDatas11">Numerical Aptitude</button><hr>
+  <button class="viewbtn" onclick="window.open('http://www.google.com')" type="button" id="loadDatas12">Performance </button>
+</div>
+   <hr>
+</div>
+</div>
+
+<div id="profilevalue">
+  <br>
+  <br>
+  <div id="loadinggggg" class="spinner-border text-primary">&emsp;&emsp;&emsp;</div>
+  <div id="output2">
+
+  </div>
+  <div id="updateprofile">
+    <h6>&emsp;To Update your profile, please <button onclick="update()" id="updateprofilevalue">click here</a></h6>
+    <br><hr><br>
+    <div class="updateform" id="updatedetails">
+      <form id="myForm1">
+        <div style="margin-left:10%;">
+          <br><br>
+          <h6 style="font-size:20px;"><u>Personal Details *</u></h6><br>
+          <label><b><i>Name :&emsp;</b></i></label><br>
+          <input id="name" type="text" name="Name" class="formStyle" placeholder="Name *" required /><br>
+          <label><b><i>DOB :&emsp;</b></i></label><br>
+          <input id="dob" type="text" name="DOB" class="formStyle" placeholder="Date of Birth *" required /><br>
+          <label><b><i>Contact Number :&emsp;</b></i></label><br>
+          <input id="contactnumber" type="number" name="Contact Number" class="formStyle" placeholder="Contact Number *" required /><br>
+
+          <label><b><i>Gender :&emsp;</b></i></label><br>
+          <input id="Gender" type="text" name="Gender" class="formStyle" placeholder="Gender *" required /><br>
+          <label><b><i>Resident Address :&emsp;</b></i></label><br>
+          <input id="resaddress" type="text" name="Res address" class="formStyle" placeholder="Residential Address *" required /><br>
+
+
+          <h6 style="font-size:20px;"><u>10th / SSLC Details *</u></h6><br>
+          <label><b><i>10th School Name :&emsp;</b></i></label><br>
+          <input id="10school" type="text" name="10th school name" class="formStyle" placeholder="Name of the School / Institution *"  required/><br>
+          <label><b><i>10th Marks Percentage :&emsp;</b></i></label><br>
+          <input id="10marks" type="text" name="10th Marks" class="formStyle" placeholder="Percentage of Marks Scored *"  required/><br>
+          <label><b><i>10th Year of Passing :&emsp;</b></i></label><br>
+          <input id="10yop" type="number" name="10th YOP" class="formStyle" placeholder="Year of Passing *"  required/><br>
+
+          <h6 style="font-size:20px;"><u>12th / HSC Details</u></h6><br>
+
+          <label><b><i>12th School Name :&emsp;</b></i></label><br>
+          <input id="12schoolname" type="text" name="12th school name" class="formStyle" placeholder="Name of the School / Institution"  /><br>
+          <label><b><i>12th Marks Percentage :&emsp;</b></i></label><br>
+          <input id="12marks" type="text" name="12th Marks" class="formStyle" placeholder="Percentage of Marks Scored"  /><br>
+          <label><b><i>12th Year of Passing :&emsp;</b></i></label><br>
+          <input id="12yop" type="number" name="12th YOP" class="formStyle" placeholder="Year of Passing"  /><br>
+          <label><b><i>12th Group :&emsp;</b></i></label><br>
+          <input id="12group" type="text" name="12th group" class="formStyle" placeholder="Mention the Group You Choose in HSC"  /><br>
+
+          <h6 style="font-size:20px;"><u>Diploma or Alternate Studies for HSC</u></h6><br>
+
+          <label><b><i>Dipolama Institute Name :&emsp;</b></i></label><br>
+          <input id="diplomaschool" type="text" name="Dipolama school" class="formStyle" placeholder="Name of the School / Institution"  /><br>
+          <label><b><i>Dipolama Marks Percentage :&emsp;</b></i></label><br>
+          <input id="diplomamarks" type="text" name="Dipolama marks" class="formStyle" placeholder="Percentage of Marks Scored"  /><br>
+          <label><b><i>Dipolama Year of Passing :&emsp;</b></i></label><br>
+          <input id="diplomayop" type="number" name="Dipolama YOP" class="formStyle" placeholder="Year of Passing"  /><br>
+          <label><b><i>Dipolama Group :&emsp;</b></i></label><br>
+          <input id="diplomagroup" type="text" name="Dipolama group" class="formStyle" placeholder="Mention the Degree and Branch"  /><br>
+
+          <h6 style="font-size:20px;"><u>Undergraduation Degree</u></h6><br>
+
+          <label><b><i>UG Institute Name :&emsp;</b></i></label><br>
+          <input id="UGname" type="text" name="UG college name" class="formStyle" placeholder="Name of the School / Institution"  /><br>
+          <label><b><i>UG Marks Percentage :&emsp;</b></i></label><br>
+          <input id="UGmarks" type="text" name="UG marks" class="formStyle" placeholder="Percentage of Marks Scored"  /><br>
+          <label><b><i>UG Year of Passing :&emsp;</b></i></label><br>
+          <input id="UGyop" type="number" name="UG YOP" class="formStyle" placeholder="Year of Passing"  /><br>
+          <label><b><i>UG Group :&emsp;</b></i></label><br>
+          <input id="UGgroup" type="text" name="UG group" class="formStyle" placeholder="Mention the Degree and Branch"  /><br>
+
+          <h6 style="font-size:20px;"><u>Post Graduate Degree</u></h6><br>
+
+          <label><b><i>PG Institute Name :&emsp;</b></i></label><br>
+          <input id="PGname" type="text" name="PG college name" class="formStyle" placeholder="Name of the School / Institution"  /><br>
+          <label><b><i>PG Marks Percentage :&emsp;</b></i></label><br>
+          <input id="PGmarks" type="text" name="PG marks" class="formStyle" placeholder="Percentage of Marks Scored"  /><br>
+          <label><b><i>PG Year of Passing :&emsp;</b></i></label><br>
+          <input id="PGyop" type="number" name="PG YOP" class="formStyle" placeholder="Year of Passing"  /><br>
+          <label><b><i>PG Group :&emsp;</b></i></label><br>
+          <input id="PGgroup" type="text" name="PG group" class="formStyle" placeholder="Mention the Degree and Branch"  /><br>
+
+          <h6 style="font-size:20px;"><u>Doctoral Degree:</u></h6><br>
+
+          <label><b><i>PHD Institute Name :&emsp;</b></i></label><br>
+          <input id="PHDname" type="text" name="PHD college name" class="formStyle" placeholder="Name of the School / Institution"  /><br>
+          <label><b><i>PHD Marks Percentage :&emsp;</b></i></label><br>
+          <input id="PHDmarks" type="text" name="PHD marks" class="formStyle" placeholder="Percentage of Marks Scored"  /><br>
+          <label><b><i>PHD Year of Passing :&emsp;</b></i></label><br>
+          <input id="PHDyop" type="number" name="PHD YOP" class="formStyle" placeholder="Year of Passing"  /><br>
+          <label><b><i>PHD Group :&emsp;</b></i></label><br>
+          <input id="PHDgroup" type="text" name="PHD group" class="formStyle" placeholder="Mention the Degree and Branch"  /><br>
+
+          <h6 style="font-size:20px;"><u>Project 1:</u></h6><br>
+          <label><b><i>Project Title 1 :&emsp;</b></i></label><br>
+          <input id="project1" type="text" name="Project1 Title" class="formStyle" placeholder="Title of the Project"  /><br>
+          <label><b><i>Project Objective 1 :&emsp;</b></i></label><br>
+          <input id="projectobjective1" type="text" name="Project1 Objective" class="formStyle" placeholder="Objective of the Project"  /><br>
+          <label><b><i>Project Description 1 :&emsp;</b></i></label><br>
+          <input id="projectdescription1" type="text" name="Project1 Description" class="formStyle" placeholder="Project Description"  /><br>
+
+          <h6 style="font-size:20px;"><u>Project 2:</u></h6><br>
+          <label><b><i>Project Title 2 :&emsp;</b></i></label><br>
+          <input id="project2"type="text" name="Project2 Title" class="formStyle" placeholder="Title of the Project"  /><br>
+          <label><b><i>Project Objective 2 :&emsp;</b></i></label><br>
+          <input id="projectobjective2"type="text" name="Project2 Objective" class="formStyle" placeholder="Objective of the Project"  /><br>
+          <label><b><i>Project Description 2 :&emsp;</b></i></label><br>
+          <input id="projectdescription2" type="text" name="Project2 Description" class="formStyle" placeholder="Project Description"  /><br>
+
+          <h6 style="font-size:20px;"><u>Work Experience Details 1</u></h6><br>
+
+          <label><b><i>Job Role 1 :&emsp;</b></i></label><br>
+          <input id="jobrole1" type="text" name="Job Role1" class="formStyle" placeholder="Job Role"  /><br>
+          <label><b><i>Experience in Months  :&emsp;</b></i></label><br>
+          <input id="jobexperience1" type="number" name="Experience in months1" class="formStyle" placeholder="Experience in months"  /><br>
+          <label><b><i>Company Name :&emsp;</b></i></label><br>
+          <input id="jobcompanyname1" type="text" name="Company Name1" class="formStyle" placeholder="Company Name"  /><br>
+
+          <h6 style="font-size:20px;"><u>Work Experience Details 2</u></h6><br>
+
+          <label><b><i>Job Role 2 :&emsp;</b></i></label><br>
+          <input id="jobrole2" type="text" name="Job Role2" class="formStyle" placeholder="Job Role"  /><br>
+          <label><b><i>Experience in Months  :&emsp;</b></i></label><br>
+          <input id="jobexperience2" type="number" name="Experience in months2" class="formStyle" placeholder="Experience in months"  /><br>
+          <label><b><i>Company Name  :&emsp;</b></i></label><br>
+          <input id="jobcompanyname2" type="text" name="Company Name2" class="formStyle" placeholder="Company Name"  /><br>
+
+          <h6 style="font-size:20px;"><u>Overall Experience</u></h6><br>
+          <label><b><i>Career Experience  :&emsp;</b></i></label><br>
+          <input id="overallcareer" type="number" name="Career Experience" class="formStyle" placeholder="Overall Career Experience in months"  /><br>
+
+          <h6 style="font-size:20px;"><u>Resume</u></h6><br>
+          <label><b><i>Resume  :&emsp;</b></i></label><br>
+          <input id="resume1" type="text" name="Resume" class="formStyle" placeholder="Paste your resume link"  /><br>
+
+          <input id="userid1" type="number" name="last" class="formStyle" placeholder="userid"  /><br>
+
+          <br>
+          <p style="color:white;">Please ensure all the details are correct before submitting</p>
+          <br><br>
+
+          <input type="Submit" id="submit" class="formButton"></input>
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+
+</div>
+</div>
+<script>
+var _0x4941=["\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x72\x65\x73\x75\x6C\x74","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x74\x65\x78\x74\x76\x61\x6C\x75\x65","\x67\x65\x74\x49\x74\x65\x6D","\x76\x61\x6C\x75\x65","\x75\x73\x65\x72","\x71\x75\x61\x6C\x69\x66\x69\x63\x61\x74\x69\x6F\x6E","\x71\x75\x61\x6C\x69\x66\x69\x63\x61\x74\x69\x6F\x6E\x76\x61\x6C\x75\x65","\x65\x78\x70\x65\x72\x69\x65\x6E\x63\x65","\x65\x78\x70\x65\x72\x69\x65\x6E\x63\x65\x76\x61\x6C\x75\x65","\x72\x65\x73\x75\x6D\x65","\x72\x65\x73\x75\x6D\x65\x76\x61\x6C\x75\x65","\x6D\x79\x4D\x6F\x64\x61\x6C","\x6D\x79\x42\x74\x6E","\x63\x6C\x6F\x73\x65","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x73\x42\x79\x43\x6C\x61\x73\x73\x4E\x61\x6D\x65","\x6F\x6E\x63\x6C\x69\x63\x6B","\x64\x69\x73\x70\x6C\x61\x79","\x73\x74\x79\x6C\x65","\x62\x6C\x6F\x63\x6B","\x6E\x6F\x6E\x65"];document[_0x4941[2]](_0x4941[1])[_0x4941[0]]= localStorage[_0x4941[4]](_0x4941[3]);document[_0x4941[2]](_0x4941[6])[_0x4941[5]]= localStorage[_0x4941[4]](_0x4941[3]);document[_0x4941[2]](_0x4941[7])[_0x4941[5]]= localStorage[_0x4941[4]](_0x4941[8]);document[_0x4941[2]](_0x4941[9])[_0x4941[5]]= localStorage[_0x4941[4]](_0x4941[10]);document[_0x4941[2]](_0x4941[11])[_0x4941[5]]= localStorage[_0x4941[4]](_0x4941[12]);var modal=document[_0x4941[2]](_0x4941[13]);var btn=document[_0x4941[2]](_0x4941[14]);var span=document[_0x4941[16]](_0x4941[15])[0];btn[_0x4941[17]]= function(){modal[_0x4941[19]][_0x4941[18]]= _0x4941[20]};span[_0x4941[17]]= function(){modal[_0x4941[19]][_0x4941[18]]= _0x4941[21]}
+</script>
+
+</body>
+</html>

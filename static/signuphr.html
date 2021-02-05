@@ -1,0 +1,224 @@
+<html>
+<head>
+<title>Jobseeker Aid.Com</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="hello.js"></script>
+<link rel="apple-touch-icon" sizes="180x180" href="faviicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="faviicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="faviicon/favicon-16x16.png">
+<link rel="manifest" href="faviicon/site.webmanifest">
+<style>
+body {
+  background-color: #2ecc71;
+  font-family: source-sans-pro, sans-serif;
+}
+
+h1 {
+  margin-left: auto;
+  margin-top: 50px;
+  text-align: center;
+  font-weight: 100;
+  font-size: 2.8em;
+  color: #ffffff;
+}
+
+div {
+  width: 500px;
+  margin: auto;
+}
+
+.formStyle {
+  background-color: #2ecc71;
+  padding: 20px;
+  width: 400px;
+  margin-bottom: 20px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ecf0f1;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  font-size: 1em;
+  font-weight: 100;
+  color: #ffffff;
+}
+
+.formButton {
+  float: right;
+background-color:#ffffff;
+display:inline-block;
+color:#2ecc71;
+font-size:28px;
+font-weight: 500;
+padding:6px 24px;
+  margin-top: 15px;
+  margin-right: 60px;
+text-decoration:none;
+}
+
+.formButton:hover {
+background-color: #27ae60;
+  color:#ffffff;
+}
+
+.formButton:active {
+position:relative;
+top:3px;
+}
+
+/*To remove the outline that appears on clicking the input textbox*/
+input:focus {
+  outline: none;
+}
+
+/* To format the placeholder text color */
+::-webkit-input-placeholder {
+   color: #ecf0f1;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #ecf0f1;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #ecf0f1;
+}
+
+:-ms-input-placeholder {
+   color: #ecf0f1;
+}
+#myDIV{
+
+}
+#myDIV1{
+  display:none;
+}
+#myDIV4{
+  display:none;
+}
+#myDIV5{
+  display:none;
+}
+#nextpage{
+
+}
+b {
+  border: 1px solid black;
+  color: #00FF00;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+
+}
+b:hover {
+  background-color: #ddd;
+  color: white;
+}
+
+.next {
+  background-color: #90EE90;
+  color: white;
+}
+.buttonload {
+  background-color: #2ecc71; /* Green background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px /* Set a font size */
+}
+</style>
+</head>
+<body>
+  <script type="text/javascript">
+  function image() {
+      window.open("/","_parent","","");
+  }
+  </script>
+  <div style="width:100%;height:80px;background-color:#90EE90;">
+    <img src="logo.JPG" onclick="image()" style="margin-left:8px;margin-top:8px;height:60px;width:150px;" />
+
+  </div>
+<h1>
+  Employer Details (HR)
+</h1>
+<hr>
+<div>
+
+
+</div>
+<br><br>
+<div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script>
+  alert("Please fill all the * (mandatory) fields before submitting. Press OK to proceed");
+  </script>
+
+  <form id="myForm"name="myForm">
+    <div id="myDIV">
+
+            <h6 style="color:white;font-size:20px;"><u>User details *</u></h6>
+
+            <input id="signinform1" type="text" name="User Name" class="formStyle" placeholder="Enter Email ID *"  required/>
+            <input id="signinform2" type="text" name="New Password" class="formStyle" placeholder="Enter Password *"  required/>
+            <input id="signinform3" type="number" name="Confirm Password" class="formStyle" placeholder="Enter Date of Birth in mmddyyyy *"  required/>
+            <br>
+            <br>
+            <b href="#" id="signdata" class="next" >Next</b>
+
+            <div id="myDIV5">
+              <button class="buttonload">
+                  <i class="fa fa-refresh fa-spin"></i>  Loading
+              </button>
+            </div>
+
+
+    </div>
+
+    <div id="myDIV1">
+      <h6 style="color:white;font-size:20px;"><u>Personal Details *</u></h6>
+      <input type="text" name="Name" class="formStyle" placeholder="Name *" required />
+      <p style="color:white;"><u><i>DOB</i></u></p>
+      <input type="date" name="DOB" class="formStyle" placeholder="Date of Birth *" required />
+      <input type="number" name="Contact Number" class="formStyle" placeholder="Contact Number *" required />
+
+      <input type="email" name="Email" class="formStyle" placeholder="Email Address *" required />
+      <input type="text" name="Gender" class="formStyle" placeholder="Gender *" required />
+      <input type="text" name="Res address" class="formStyle" placeholder="Residential Address *" required />
+
+
+      <input type="text" name="Company Name" class="formStyle" placeholder="Name of the Company" required />
+      <input type="text" name="Job Role" class="formStyle" placeholder="Your Role in the Organization" required />
+    </div>
+
+
+    <div id="myDIV4">
+      <br>
+      <p style="color:white;">Please ensure all the details are correct before submitting</p>
+      <br><br>
+
+      <a><input type="Submit" id="submit" class="formButton"></input></a>
+    </div>
+
+  </form>
+  <br><br><br><br>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      var y = document.getElementById("myDIV1");
+      var z = document.getElementById("myDIV4");
+
+      x.style.display = "none";
+      y.style.display = "block";
+      z.style.display = "block";
+
+
+
+
+    }
+
+  </script>
+
+</div>
+</body>
+</html>

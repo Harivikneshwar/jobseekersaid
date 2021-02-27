@@ -207,6 +207,42 @@ h{
 #homepage{
   style:none;
 }
+#news{
+  display:none;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+#loading5{
+  display:none;
+  margin-top:10%;
+  margin-left:46%;
+}
+#myForm5{
+  margin:auto;
+  width:60%
+}
+#user1{
+  display:none;
+}
+#username1{
+  display:none;
+}
+#currentdate1{
+  display:none;
+}
+.newssubmit {
+background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+margin: 4px 2px;
+cursor: pointer;
+font-size: 15px;
+}
 </style>
 </head>
 <body style="background-image: url('image11.jpg');background-attachment: fixed;background-size: 100% 100%;">
@@ -214,6 +250,7 @@ h{
 
   <ul class="topnav">
     <li><a onclick="homepage()" >Home</a></li>
+    <li><a id="newsdata" onclick="newsfeed()">News feed</a></li>
     <li><a onclick="home()">Post Your Job</a></li>
     <li><a onclick="viewjob()">View Posted Jobs</a></li>
     <li><a onclick="viewapplicants()">Applications Received</a></li>
@@ -359,6 +396,48 @@ h{
 
 
   </div>
+
+
+  <div id="news">
+   <form id="myForm5">
+     <br>
+     <br>
+      <h5>Post your thoughts</h5>
+      <div class="row">
+           <div class="col-md-6">
+               <div class="form-group">
+                 <input type="text" id="user1" name="usermail" class="form-control" placeholder="UserID *" value="" />
+               </div>
+               <div class="form-group">
+                 <input type="text" id="username1" name="name" class="form-control" placeholder="UserID *" value="" />
+               </div>
+               <div class="form-group">
+                 <input type="text" id="caption" name="caption" class="form-control" placeholder="Caption " value="" />
+               </div>
+               <div class="form-group">
+                   <input type="text" id="post1" name="post" class="form-control" placeholder="drive link *" value="" required/>
+               </div>
+               <p style="color:blue">Upload the image from google drive and paste the link in above box.</p>
+               <div class="form-group">
+                   <input id="currentdate1" type="text" name="currentdate" class="form-control" placeholder="date" value="" />
+               </div>
+               <div class="form-group">
+                   <input class="newssubmit" type="submit" id="submit5" name="btnSubmit" class="btnContact" value="submit" />
+               </div>
+               <br>
+           </div>
+
+       </div>
+       <p>Click here to view your posts <a id="postdata"><u style="color:blue;"> Your post </u></a></p>
+
+   </form>
+
+   <div id="loading5" class="spinner-border text-primary"></div>
+   <div id="output5"></div>
+
+  </div>
+
+
   <div id="home">
 
 
@@ -465,6 +544,7 @@ y = n.getFullYear();
 m = n.getMonth() + 1;
 d = n.getDate();
 document.getElementById("currentdate").value =  m + "/" + d + "/" + y;
+document.getElementById("currentdate1").value =  m + "/" + d + "/" + y;
 </script>
 
 </body>

@@ -273,9 +273,24 @@ top:3px;
   #user1{
     display:none;
   }
+  #username1{
+    display:none;
+  }
   #currentdate{
     display:none;
   }
+  .newssubmit {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 15px;
+}
   /* Modal Content */
   .modal-content {
       background-color: #fefefe;
@@ -483,7 +498,10 @@ top:3px;
     <div class="row">
          <div class="col-md-6">
              <div class="form-group">
-               <input type="text" id="user1" name="username" class="form-control" placeholder="UserID *" value="" />
+               <input type="text" id="user1" name="usermail" class="form-control" placeholder="UserID *" value="" />
+             </div>
+             <div class="form-group">
+               <input type="text" id="username1" name="name" class="form-control" placeholder="UserID *" value="" />
              </div>
              <div class="form-group">
                <input type="text" id="caption" name="caption" class="form-control" placeholder="Caption " value="" />
@@ -491,16 +509,21 @@ top:3px;
              <div class="form-group">
                  <input type="text" id="post1" name="post" class="form-control" placeholder="drive link *" value="" required/>
              </div>
+             <p style="color:blue">Upload the image from google drive and paste the link in above box.</p>
              <div class="form-group">
                  <input id="currentdate" type="text" name="currentdate" class="form-control" placeholder="date" value="" />
              </div>
              <div class="form-group">
-                 <input type="submit" id="submit5" name="btnSubmit" class="btnContact" value="submit" />
+                 <input class="newssubmit" type="submit" id="submit5" name="btnSubmit" class="btnContact" value="submit" />
              </div>
              <br>
          </div>
+
      </div>
+     <p>Click here to view your posts <a id="postdata"><u style="color:blue;"> Your post </u></a></p>
+
  </form>
+
  <div id="loading5" class="spinner-border text-primary"></div>
  <div id="output5"></div>
 
